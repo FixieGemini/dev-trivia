@@ -1,13 +1,16 @@
 var questionBox =  document.getElementById('question-box');
-questionBox.style.display = 'none';
 var gameBox = document.querySelector('.game-box');
-var playButton = document.querySelector('.play-button')
+var nameBox = document.getElementById('name-box');
+var playButton = document.querySelector('.play-button');
 var questionsContainer = document.querySelector('.questions-container');
 var answer = document.querySelectorAll('.answer');
 var rightOrWrong = document.getElementById('rightOrWrong');
 var timerElement = document.querySelector('.timer-count');
 var currentQuestion = 0;
 var score = 0;
+
+questionBox.style.display = 'none';
+nameBox.style.display = 'none';
 
 var questions = [
     {
@@ -40,6 +43,7 @@ function startTimer() {
         timerElement.textContent = timerCount;
         if (timerCount === 0) {
             questionBox.style.display = 'none';
+            nameBox.style.display = 'block';
             clearInterval(timer);
         }
     }, 1000);
@@ -60,6 +64,7 @@ function checkAnswer(){
         displayQuestion();
     }else {
         questionBox.style.display = 'none';
+        nameBox.style.display = 'block';
     }
 }
 

@@ -49,18 +49,11 @@ header {
     align-items: center;
     justify-content: center;
   }
-  /*
-  .option {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    color: white;
-    background: rgba(70, 50, 120, 0.8);
-    text-shadow: 0 0 .5rem black;
-  }
-  */
-  kbd {
-    font-size: 1.5rem;
-  }
+ 
+#name-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
