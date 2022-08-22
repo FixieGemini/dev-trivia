@@ -10,42 +10,50 @@
 <body>
     <header>
         <div class="high-scores">High Scores</div>
-        <div class="large-font">Web Development Trivia!</div>
-        <div class="timer-count">10</div>
+        <div class="timer-count">Time remaining: 10 seconds</div>
     </header>
 
     <main>
-        <section>
+        
+        
+        
+        <div class="game-box">
+            <div class="large-font">Welcome to Web Developer Trivia!</div>
+            <button class="play-button">Play</button>
+        </div>
+        
+        
+        <section id="question-box">
             
+            
+
             <div class="questions-container">What was the question? This is where I will put the questions to the quiz. Any questions?</div>
-
+            
             <div class="answer-choices">
-                <div class="option">
-                    <kbd>A.</kbd>
-                    <span class="answer">This is one answer choice.</span>
+                <div class="option"> 
+                    <button class="answer">This is one answer choice.</button>
                 </div>
             </div>
 
             <div class="answer-choices">
                 <div class="option">
-                    <kbd>B.</kbd>
-                    <span class="answer">This is one answer choice.</span>
+                    <button class="answer">This is one answer choice.</button>
                 </div>
             </div>
 
             <div class="answer-choices">
                 <div class="option">
-                    <kbd>C.</kbd>
-                    <span class="answer">This is one answer choice.</span>
+                    <button class="answer">This is one answer choice.</button>
                 </div>
             </div>
 
             <div class="answer-choices">
                 <div class="option">
-                    <kbd>D.</kbd>
-                    <span class="answer">This is one answer choice.</span>
+                    <button class="answer">This is one answer choice.</button>
                 </div>
-            </div>
+            </div> 
+
+            <h6 id="rightOrWrong">></h6>
         
         </section>
 

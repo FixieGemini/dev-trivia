@@ -1,11 +1,43 @@
 header {
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 1rem;
   }
 
+  .game-box {
+    padding: 40px;
+    text-align: center;
+    border-bottom:30px #879274;
+  }
+
+  .large-font {
+    font-size: 3.5em;
+    text-align:center;
+  }
+
+  button {
+    background: rgba(70, 50, 120, 0.8);
+    text-shadow: 0 0 .5rem black;
+    border: .4rem solid black;
+    border-radius: .5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
 .questions-container {
+    font-size: 2rem;
     display: flex;
     justify-content: space-around;
     padding: 2%;
@@ -17,7 +49,7 @@ header {
     align-items: center;
     justify-content: center;
   }
-
+  /*
   .option {
     border: .4rem solid black;
     border-radius: .5rem;
@@ -28,7 +60,7 @@ header {
     background: rgba(70, 50, 120, 0.8);
     text-shadow: 0 0 .5rem black;
   }
-
+  */
   kbd {
     font-size: 1.5rem;
   }
