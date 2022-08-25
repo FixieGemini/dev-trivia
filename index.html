@@ -54,19 +54,28 @@
 
         <section id="name-box">
             
-            <h2>Pencils down!</h2>
+            <h2>Pencils Down!</h2>
+            <h3 id="points">Your score : point total</h3>
 
-            <div id="nameEntry">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="user-name">
-            </div>
+            <form id="nameEntry">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="user-name">
+            </form>
 
-            <button type="submit">Submit</button>
+            <button id="submit-button">Submit</button>
 
         </section>
 
         <section id="score-box">
             
+            <h3>High Scores</h3>
+
+            <ol id="place">
+                <li id="first"></li>
+                <li id="second"></li>
+                <li id="third"></li>
+            </ol>
+
         </section>
 
     </main>

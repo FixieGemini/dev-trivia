@@ -1,20 +1,28 @@
 var questionBox =  document.getElementById('question-box');
 var gameBox = document.querySelector('.game-box');
 var nameBox = document.getElementById('name-box');
+var scoreBox = document.getElementById('score-box');
 var playButton = document.querySelector('.play-button');
+var submitButton = document.getElementById('submit-button');
 var questionsContainer = document.querySelector('.questions-container');
 var answer = document.querySelectorAll('.answer');
 var rightOrWrong = document.getElementById('rightOrWrong');
 var timerElement = document.querySelector('.timer-count');
+var totalPoints = document.querySelector('#points');
+var nameForm = document.querySelector('#nameEntry');
+var nameInput = document.querySelector("#nameInput");
+var highestPlayerList = document.querySelector("#place");
+
 var currentQuestion = 0;
 var score = 0;
 
 questionBox.style.display = 'none';
 nameBox.style.display = 'none';
+scoreBox.style.display = 'none';
 
 var questions = [
     {
-        question:'What are binary variables that have two possible variables of true or false called?', 
+        question:'What are binary variables that have two possible values of true or false called?', 
         answers:['Strings', 'Objects', 'Booleans', 'Arrays'],
         correctAnswer: 'Booleans'
     },
@@ -46,6 +54,10 @@ function startTimer() {
             nameBox.style.display = 'block';
             clearInterval(timer);
         }
+        if (nameBox.style.display === 'block') {
+            totalPoints.innerHTML = `Your score : ${localStorage.getItem("score")}` 
+            clearInterval(timer);
+        }
     }, 1000);
 }
 
@@ -55,6 +67,7 @@ function checkAnswer(){
     console.log(score);
     if(userEntry === questions[currentQuestion].correctAnswer){
         score += 10;
+        localStorage.setItem("score", score);
         rightOrWrong.textContent = 'Correct';
     }else {
         rightOrWrong.textContent = 'Incorrect';
@@ -80,3 +93,21 @@ playButton.addEventListener("click", function(){
     startTimer();
 })
 
+submitButton.addEventListener('click', function(){
+    questionBox.style.display = 'none';
+    gameBox.style.display = 'none';
+    nameBox.style.display = 'none';
+    scoreBox.style.display = 'block';
+
+    let highestScorePlayerNames = {
+    }
+
+    highestPlayerList["name1"] =  nameInput.value;
+
+    localStorage.getItem("name");
+
+    localStorage.setItem("name", highestScorePlayerNames);
+
+    highestPlayerList.innerHTML = localStorage.getItem("name");
+
+})
